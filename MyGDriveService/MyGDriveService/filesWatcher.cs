@@ -13,6 +13,9 @@ namespace MyGDriveService
         {
             try
             {
+                FileSyncManager fsManager = new FileSyncManager();
+                QueueManager.GetQueue().Add(fsManager.GetFileSync(e));
+
                 StreamWriter file = File.AppendText(@"C:\test\log.txt");
                 file.WriteLine(e.Name);
                 file.Flush();

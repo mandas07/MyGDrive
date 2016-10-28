@@ -28,6 +28,9 @@ namespace MyGDriveService
             filFileWatcher.Path = @"C:\Trunk";
             filFileWatcher.Changed += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
             filFileWatcher.Created += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
+            filFileWatcher.Deleted += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
+            filFileWatcher.Renamed += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
+            filFileWatcher.NotifyFilter = System.IO.NotifyFilters.FileName;
         }
 
         protected override void OnStop()

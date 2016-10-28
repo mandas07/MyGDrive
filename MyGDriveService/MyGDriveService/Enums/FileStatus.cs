@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyGDriveService.Enums
 {
-    enum FileChangeReason
+    enum FileStatus
     {
-        Createed,
-        Deleted,
-        Changed,
-        Renamed
+        InQueue,
+        InProgres,
+        Done
     }
 }

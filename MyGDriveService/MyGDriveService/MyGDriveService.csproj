@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\FileSync.cs" />
+    <Compile Include="Class\FileSyncManager.cs" />
+    <Compile Include="Class\FileSyncQueue.cs" />
+    <Compile Include="Class\QueueManager.cs" />
     <Compile Include="Enums\FileChangeReason.cs" />
+    <Compile Include="Enums\FileStatus.cs" />
     <Compile Include="filesWatcher.cs" />
     <Compile Include="Service1.cs">
       <SubType>Component</SubType>
