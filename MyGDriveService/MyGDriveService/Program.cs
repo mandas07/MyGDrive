@@ -14,12 +14,19 @@ namespace MyGDriveService
         /// </summary>
         static void Main()
         {
+#if DEBUG
+            GDriveService myService = new GDriveService();
+            myService.OnDebug();
+            System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
+
+#else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new GDriveService()
             };
             ServiceBase.Run(ServicesToRun);
+#endif
         }
     }
 }

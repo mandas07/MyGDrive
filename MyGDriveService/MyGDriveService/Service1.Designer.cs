@@ -1,6 +1,6 @@
 ﻿namespace MyGDriveService
 {
-    partial class Service1
+    partial class GDriveService
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.filFileWatcher = new System.IO.FileSystemWatcher();
+            ((System.ComponentModel.ISupportInitialize)(this.filFileWatcher)).BeginInit();
+            // 
+            // filFileWatcher
+            // 
+            this.filFileWatcher.EnableRaisingEvents = true;
+            // 
+            // Service1
+            // 
             this.ServiceName = "Service1";
+            ((System.ComponentModel.ISupportInitialize)(this.filFileWatcher)).EndInit();
+
         }
 
         #endregion
+
+        private System.IO.FileSystemWatcher filFileWatcher;
     }
 }

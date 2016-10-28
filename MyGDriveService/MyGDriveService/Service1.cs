@@ -10,15 +10,24 @@ using System.Threading.Tasks;
 
 namespace MyGDriveService
 {
-    public partial class Service1 : ServiceBase
+    public partial class GDriveService : ServiceBase
     {
-        public Service1()
+        public GDriveService()
         {
             InitializeComponent();
         }
 
+        public void OnDebug()
+        {
+            OnStart(null);
+        }
+
         protected override void OnStart(string[] args)
         {
+            filesWatcher watcher = new filesWatcher();
+            filFileWatcher.Path = @"C:\Trunk";
+            filFileWatcher.Changed += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
+            filFileWatcher.Created += watcher.fileWatcherWatchDDriveMYdataFolder_Modified;
         }
 
         protected override void OnStop()
